@@ -5,4 +5,5 @@ public class Contact {
     public String contactTelephoneNumber = "";
     public int contactId = 0;
     public String contactStatus = "";
+    public  String userAppName = "";
 }

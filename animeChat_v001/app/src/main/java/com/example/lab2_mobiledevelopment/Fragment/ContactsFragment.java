@@ -54,7 +54,7 @@ public class ContactsFragment extends Fragment {
     User stu_user;
     RecyclerView stu_recyclerView;
     Context context;
-    private UserAdapter stu_userAdapter;
+
     private List<User> mUsers;;
     ArrayList<Contact> stu_arrayListContacts;
 
@@ -130,33 +130,21 @@ public class ContactsFragment extends Fragment {
                         for(DataSnapshot stu_snapshot : dataSnapshot.getChildren()){
 
                             stu_user = stu_snapshot.getValue(User.class);
-                            //FirebaseAuth stu_auth;
-                           // stu_auth = FirebaseAuth.getInstance();
-                            FirebaseUser stu_fuser = FirebaseAuth.getInstance().getCurrentUser();
 
-                            //System.out.println(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", ""));
-                            //System.out.println(stu_user.getPhonenumber().split(" "));
-//                            if(stu_user.getPhonenumber().substring(0,9) == )
-                            HashMap<String, Object> map = new HashMap<>();
                             List<String> list = new ArrayList<>();
 
-                            if (stu_fuser.getUid().equals(stu_user.getId())) {
-                                list.add(stu_user.getPhonenumber());
 
+                            // Check phone numbers in database, if it match with the phone book add it to the list
+                            if(stu_snapshot.child("phonenumber").getValue().equals(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", ""))){
+                                list.add(stu_snapshot.child("phonenumber").getValue().toString());
                             }
-
-                            System.out.println(list.size());
-
-                            //System.out.println(reference.child("phonenumber"));
-                            //List<String> list = new ArrayList<>();
-                            //list.add(stu_user.getPhonenumber());
-
-                            //System.out.println(list.size());
-                            //System.out.println(stu_user.getPhonenumber().matches(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", "")));
+                            //System.out.println(stu_snapshot.child("phonenumber").getValue().toString());
+                            System.out.println(list);
                             for(int i = 0; i < list.size(); i++) {
 
-
-                                if (list.get(i).equals(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", ""))) {
+                                if (list.get(i).equals(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", "")))
+                                {
+                                    stu_contact.userAppName = stu_snapshot.child("firstname").getValue().toString() + " " +stu_snapshot.child("lastname").getValue().toString();
 
                                     stu_contact.contactStatus = "Register";
 
@@ -165,10 +153,12 @@ public class ContactsFragment extends Fragment {
 //                                intent.putExtra("userid", stu_user.getId());
 //                                startActivity(intent);
 
-                                } else if (!stu_user.getPhonenumber().equals(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", ""))) {
+                                } else
+                                if (!stu_user.getPhonenumber().equals(stu_contact.contactTelephoneNumber.replaceAll("[-() ]+", ""))) {
                                     stu_contact.contactStatus = "Not Register";
                                 }
                             }
+
 
 
                         }

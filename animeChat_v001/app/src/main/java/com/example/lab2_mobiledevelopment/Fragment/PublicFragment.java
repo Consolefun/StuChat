@@ -67,26 +67,6 @@ public class PublicFragment extends Fragment {
 
             }
         });
-//        stu_SearchUsers.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.
-//                        INPUT_METHOD_SERVICE);
-//                imm.hideSoftInputFromWindow(getActivity().getWindow().getDecorView().getRootView().getWindowToken(), 0);
-//                return true;
-//            }
-//        });
-        // this doesnt work
-//        stu_SearchUsers.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-//            @Override
-//            public void onFocusChange(View v, boolean hasFocus) {
-//
-//                InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Activity.INPUT_METHOD_SERVICE);
-//                imm.hideSoftInputFromWindow(stu_view.getWindowToken(), 0);
-//
-//            }
-//        });
-
 
         return stu_view;
     }
@@ -124,6 +104,7 @@ public class PublicFragment extends Fragment {
 
     private void StuSearch(String v) {
         final FirebaseUser stu_fuser = FirebaseAuth.getInstance().getCurrentUser();
+
         Query stu_query = FirebaseDatabase.getInstance().getReference("Users").orderByChild("firstname")
                 .startAt(v)
                 .endAt(v+"\uf8ff");

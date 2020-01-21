@@ -19,6 +19,24 @@
 
     </TextView>
 
+
+    <TextView
+        android:id="@+id/textview_app_name"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_marginStart="208dp"
+        android:text="User name"
+
+        android:textColor="@color/colorPrimaryDark"
+
+        android:textSize="22dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+
     <TextView
         android:id="@+id/textview_contact_phoneNumber"
         android:layout_width="match_parent"
