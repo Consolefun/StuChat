@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item android:id="@+id/my_profile"-->
+<!--        android:title="My profile" />-->
+
+    <item android:id="@+id/Sign_out"
+        android:title="Sign out" />
+
+</menu>
+
+    <!-- This menu should be displayed after signing in-->

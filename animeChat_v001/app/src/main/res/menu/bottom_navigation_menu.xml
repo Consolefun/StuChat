@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/nav_chats"
+        android:title="Chats"
+        android:icon="@drawable/conversation"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/nav_Public"
+        android:title="Public"
+        android:icon="@drawable/publicchats"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/nav_Contacts"
+        android:title="Contacts"
+        android:icon="@drawable/calls"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/user"
+        app:showAsAction="ifRoom"/>
+
+
+</menu>
+    <!-- This menu is for the bottom navigation bar -->

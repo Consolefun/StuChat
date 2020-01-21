@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "291291185890",
+    "firebase_url": "https://imagedetection-71464.firebaseio.com",
+    "project_id": "imagedetection-71464",
+    "storage_bucket": "imagedetection-71464.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:291291185890:android:3814abfa3fb2242e4b54bb",
+        "android_client_info": {
+          "package_name": "com.example.lab2_mobiledevelopment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "291291185890-e307mi3dfo4j154bfuvuoqk1hlmbrat6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lab2_mobiledevelopment",
+            "certificate_hash": "9e20c5406dd319b0e1b1506099ea5beec01916ce"
+          }
+        },
+        {
+          "client_id": "291291185890-o7dcngsu9qln2pl5ucbbildcucrdop7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz4k-VFvZwDX_P0jR9l83orKhtCcOYd7I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "291291185890-o7dcngsu9qln2pl5ucbbildcucrdop7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
