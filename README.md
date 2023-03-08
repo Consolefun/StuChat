@@ -1,4 +1,4 @@
-# PublicChat
+# StuChat
 
 # Introduction
 
